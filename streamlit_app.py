@@ -24,7 +24,7 @@ if ingredients_list:
     # st.write(ingredients_str)
     for fc in ingredients_list:
         smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{fc}")
-        st.dataframe(data=smoothiefroot_response, use_continer_width=True)
+        st.dataframe(data=smoothiefroot_response, use_container_width=True)
 
   
     my_insert_stmt = f"""insert into smoothies.public.orders(ingredients, NAME_ON_ORDER) 
